@@ -8,8 +8,8 @@ public class TransformingConfigurationBuilder : ConfigurationBuilder
 
     public new IConfigurationBuilder Add(IConfigurationSource source)
     {
-        if (source is not TransformedConfigurationSource)
-            source = new TransformedConfigurationSource(source);
+        if (source is not TransformingConfigurationSource)
+            source = new TransformingConfigurationSource(source);
 
         return base.Add(source);
     }

@@ -2,7 +2,7 @@ using Microsoft.Extensions.Configuration;
 
 namespace ConfigTransform;
 
-public class TransformedConfigurationSource : IConfigurationSource
+public class TransformingConfigurationSource : IConfigurationSource
 {
     public IConfigurationProvider Build(IConfigurationBuilder builder)
     {
@@ -23,7 +23,7 @@ public class TransformedConfigurationSource : IConfigurationSource
 
     private readonly IConfigurationSource _configuration;
 
-    internal TransformedConfigurationSource(IConfigurationSource config)
+    internal TransformingConfigurationSource(IConfigurationSource config)
     {
         _configuration = config;
     }
