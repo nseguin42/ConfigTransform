@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConfigTransform", "ConfigTransform\ConfigTransform.csproj", "{EF1BD595-0F58-4F9D-ACE0-17E502F5EF54}"
+	ProjectSection(ProjectDependencies) = postProject
+		{38A3032F-8379-4A00-9F5F-AA868EF46B18} = {38A3032F-8379-4A00-9F5F-AA868EF46B18}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoApp", "DemoApp\DemoApp.csproj", "{4E5559AE-10E1-4881-A1D6-3764E086AAED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConfigTransform.Tests", "ConfigTransform.Tests\ConfigTransform.Tests.csproj", "{9D248EFA-F8F2-4E4A-819A-14F9F49E2962}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EF1BD595-0F58-4F9D-ACE0-17E502F5EF54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF1BD595-0F58-4F9D-ACE0-17E502F5EF54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF1BD595-0F58-4F9D-ACE0-17E502F5EF54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF1BD595-0F58-4F9D-ACE0-17E502F5EF54}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E5559AE-10E1-4881-A1D6-3764E086AAED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E5559AE-10E1-4881-A1D6-3764E086AAED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E5559AE-10E1-4881-A1D6-3764E086AAED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E5559AE-10E1-4881-A1D6-3764E086AAED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D248EFA-F8F2-4E4A-819A-14F9F49E2962}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D248EFA-F8F2-4E4A-819A-14F9F49E2962}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D248EFA-F8F2-4E4A-819A-14F9F49E2962}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D248EFA-F8F2-4E4A-819A-14F9F49E2962}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
