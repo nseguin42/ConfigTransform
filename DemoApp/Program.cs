@@ -1,4 +1,5 @@
 ﻿using ConfigTransform;
+using ConfigTransform.Transformers;
 using DemoApp;
 using DemoApp.Settings;
 using Microsoft.Extensions.Configuration;

@@ -1,6 +1,6 @@
 using System.Security.Cryptography;
 
-namespace ConfigTransform;
+namespace ConfigTransform.Transformers;
 
 public class DecryptingConfigTransformer : IConfigTransformer
 {

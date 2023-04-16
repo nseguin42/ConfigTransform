@@ -1,5 +1,6 @@
 using System.Security.Cryptography;
 using System.Text;
+using ConfigTransform.Transformers;
 using Microsoft.Extensions.Configuration.Memory;
 using Xunit.Abstractions;
 
