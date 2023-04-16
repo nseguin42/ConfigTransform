@@ -5,7 +5,7 @@ namespace DemoApp.Settings;
 
 public static class ServiceCollectionExtensions
 {
-    public static IServiceCollection ConfigureSettings<T>(
+    public static IServiceCollection ConfigureOptions<T>(
         this IServiceCollection services,
         IConfiguration configuration,
         string? sectionName = null) where T : class

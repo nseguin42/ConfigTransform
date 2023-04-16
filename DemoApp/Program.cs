@@ -13,8 +13,8 @@ var decryptedConfiguration = new TransformingConfigurationBuilder()
     .Build();
 
 var serviceProvider = new ServiceCollection().AddSingleton<IConfiguration>(decryptedConfiguration)
-    .ConfigureSettings<ApplicationSettings>(decryptedConfiguration)
-    .ConfigureSettings<DatabaseSettings>(decryptedConfiguration)
+    .ConfigureOptions<ApplicationSettings>(decryptedConfiguration)
+    .ConfigureOptions<DatabaseSettings>(decryptedConfiguration)
     .AddSingleton<ExampleService>()
     .BuildServiceProvider();
 
