@@ -14,6 +14,10 @@ public class TransformingConfigurationBuilder : ConfigurationBuilder
         return base.Add(source);
     }
 
+    public TransformingConfigurationBuilder() : this(new Dictionary<string, IConfigTransformer>())
+    {
+    }
+
     public TransformingConfigurationBuilder(
         IDictionary<string, IConfigTransformer> configTransformers)
     {
@@ -23,5 +27,13 @@ public class TransformingConfigurationBuilder : ConfigurationBuilder
     public new IConfigurationRoot Build()
     {
         return base.Build();
+    }
+
+    public TransformingConfigurationBuilder AddConfigTransformer(
+        string name,
+        IConfigTransformer transformer)
+    {
+        ConfigTransformers.Add(name, transformer);
+        return this;
     }
 }

@@ -5,12 +5,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Configuration.Json;
 using Microsoft.Extensions.DependencyInjection;
 
-var transformers = new Dictionary<string, IConfigTransformer>
-{
-    {"aes", DecryptingConfigTransformer.CreateAesTransformer("key.bin", "iv.bin")}
-};
 
-var decryptedConfiguration = new TransformingConfigurationBuilder(transformers)
+var decryptedConfiguration = new TransformingConfigurationBuilder()
+    .AddConfigTransformer("aes", DecryptingConfigTransformer.CreateAesTransformer("key.bin", "iv.bin"))
     .Add(new JsonConfigurationSource {Path = "appsettings.json"})
     .Build();
 
