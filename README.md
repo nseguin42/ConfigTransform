@@ -6,13 +6,11 @@ A C# class library for transforming configuration sources at runtime.
 
 See the Demo App for an example of how to use this library.
 
-Generally, you will want to implement `IConfigTransformer`
-and pass them to a `TransformingConfigurationBuilder`. In your configuration, values of the form `${key:value}` will be
-transformed by the corresponding `IConfigTransformer` instance.
+The `TransformingConfigurationBuilder` class is used to build a configuration source that applies transformations
+to values of the form `${key:value}`. The transformations are implemented by instances of `IConfigTransformer`.
 
 For example, the demo app uses the included `DecryptingConfigTransformer` to decrypt AES-encrypted values in the
 configuration.
-In the config, the value is prefixed with `aes:` and the encrypted value is base64-encoded:
 
 ```json
 {
@@ -23,8 +21,6 @@ In the config, the value is prefixed with `aes:` and the encrypted value is base
   }
 }
 ```
-
-The `DecryptingConfigTransformer` is configured with a key and IV file, which are used to decrypt the value:
 
 ```csharp
 var decryptedConfiguration = new TransformingConfigurationBuilder(transformers)
